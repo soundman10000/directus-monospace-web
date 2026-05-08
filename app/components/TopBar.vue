@@ -1,0 +1,82 @@
+<template>
+  <header class="bg-bg border-b border-border px-4 py-3">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center space-x-4">
+        <img :src="empLogo" alt="Empyrean Logo" class="h-8 w-auto" />
+        <h1 class="text-xl font-semibold text-text">Monopyrean</h1>
+      </div>
+
+        <div class="flex items-center space-x-4">
+
+        <button
+          @click="toggleTheme"
+          class="flex items-center justify-center w-10 h-10 rounded-lg bg-bg-secondary hover:bg-border transition-colors"
+          :title="theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'"
+        >
+          <svg
+            v-if="theme === 'light'"
+            class="w-5 h-5 text-text"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+            />
+          </svg>
+          <svg
+            v-else
+            class="w-5 h-5 text-text"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+</template>
+
+<script setup lang="ts">
+import empLogo from '@@/assets/images/empLogo.png'
+
+const { theme, toggleTheme } = useTheme()
+</script>
+
+<style scoped>
+header {
+  background: linear-gradient(to right, var(--color-bg), var(--color-bg-secondary));
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+.bg-bg {
+  background-color: var(--color-bg);
+}
+
+.bg-bg-secondary {
+  background-color: var(--color-bg-secondary);
+}
+
+.border-border {
+  border-color: var(--color-border);
+}
+
+.text-text {
+  color: var(--color-text);
+}
+
+.hover\:bg-border:hover {
+  background-color: var(--color-border);
+}
+</style>
