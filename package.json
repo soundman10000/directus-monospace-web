@@ -7,15 +7,19 @@
     "dev": "cross-env NODE_TLS_REJECT_UNAUTHORIZED=0 nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "monospace:generate": "monospace generate"
   },
   "dependencies": {
+    "@directus/sdk": "^21.3.0",
+    "@monospace/sdk": "https://pkg.pr.new/directus/monospace/@monospace/sdk@2303",
     "nuxt": "^4.4.4",
     "vue": "^3.5.33",
     "vue-router": "^5.0.6"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.14.0",
+    "@types/node": "^25.6.2",
     "cross-env": "^10.1.0"
   }
 }
