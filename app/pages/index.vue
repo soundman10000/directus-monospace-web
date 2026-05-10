@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-bg p-6">
+  <div class="bg-bg p-6">
     <div class="max-w-7xl mx-auto">
       <h1 class="text-3xl font-bold text-text mb-6">Plan Summary</h1>
       <div class="bg-bg-secondary rounded-lg border border-border p-6 shadow-sm">

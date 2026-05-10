@@ -19,7 +19,7 @@
             :key="row.id || row.plan_uuid"
             :class="[
               'hover:bg-bg-secondary transition-colors',
-              index % 2 === 0 ? 'bg-bg' : 'bg-bg-secondary/50'
+              index % 2 === 0 ? 'bg-bg' : 'bg-bg-secondary'
             ]"
           >
             <td
@@ -34,7 +34,6 @@
       </table>
     </div>
 
-    <!-- Pagination Controls -->
     <div class="flex items-center justify-between">
       <div class="text-sm text-text-secondary">
         Showing {{ startItem }} to {{ endItem }} of {{ totalItems }} results
@@ -104,7 +103,6 @@ const getNestedValue = (obj: any, path: string): any => {
   return path.split('.').reduce((current, key) => current?.[key], obj);
 };
 
-// Pagination computed properties
 const totalItems = computed(() => props.data.length);
 const totalPages = computed(() => Math.ceil(totalItems.value / props.pageSize));
 const startItem = computed(() => (props.currentPage - 1) * props.pageSize + 1);

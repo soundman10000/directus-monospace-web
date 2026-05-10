@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-bg border-b border-border px-4 py-3">
+  <header class="sticky top-0 z-50 bg-bg border-b border-border px-4 py-3">
     <div class="flex items-center justify-between">
       <div class="flex items-center space-x-4">
         <img :src="empLogo" alt="Empyrean Logo" class="h-8 w-auto" />
