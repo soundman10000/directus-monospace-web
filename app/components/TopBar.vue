@@ -59,24 +59,4 @@ header {
   border-color: var(--color-border);
   color: var(--color-text);
 }
-
-.bg-bg {
-  background-color: var(--color-bg);
-}
-
-.bg-bg-secondary {
-  background-color: var(--color-bg-secondary);
-}
-
-.border-border {
-  border-color: var(--color-border);
-}
-
-.text-text {
-  color: var(--color-text);
-}
-
-.hover\:bg-border:hover {
-  background-color: var(--color-border);
-}
 </style>
