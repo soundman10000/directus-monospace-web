@@ -48,7 +48,7 @@
 </template>
 
 <script setup lang="ts">
-import empLogo from '@@/assets/images/empLogo.png'
+import empLogo from '@@/app/assets/images/empLogo.png'
 
 const { theme, toggleTheme } = useTheme()
 </script>
